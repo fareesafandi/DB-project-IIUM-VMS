@@ -2,9 +2,36 @@ body {
     background-color: #343434;
 }
 
+.mainbody {
+    text-align: center;
+}
+
 #title {
     text-align: center;
     font-family: Cambria;
     color: whitesmoke;
 }
 
+button:hover {
+    /*background-color: #EAEBED;*/
+    padding-left: 50px;
+    padding-right: 50px;
+    border: none;
+    /*background-image: url('KICT.png');*/
+
+}
+
+button {
+    background-color: #F2BB05;
+    border: none;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: block;
+    text-align: center;
+    margin: auto; 
+    margin-top: 15px;
+}
+
+.venues {
+    margin: auto; 
+}
