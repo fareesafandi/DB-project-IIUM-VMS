@@ -5,18 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <meta name="description" content="IIUM Venue Management System">
         <link rel="stylesheet" href="web.css">
+
+        <title>IIUM VMS</title>
+
     </head>
     <body>
-        <h1 id="title">IIUM Venue Management System</h1>
+        
+        <div id="home" onclick="document.location='index.html'">
+            <img src="img/IIUM.svg" alt="IIUMlogo" id="titlelogo">
+            <h1 id="title" style="text-align: left;">IIUM VMS</h1>
+        </div>
+        
+
+        <h1 id="title" style="font-family: Arial;">Venue Management System</h1>
         
         <div class="venues">
-            <button onclick="document.location='KICT.htm'">KICT Venues</button>
+            <button onclick="document.location='KICT.htm'" class="kict">KICT<br>Venues</button>
 
-            <button onclick="document.location='HS.htm'">AHAS KIRHS HS building Venues</button>
+            <button onclick="document.location='HS.htm'" class="hs">AHAS KIRHS <br> HS building <br> Venues</button>
 
-            <button onclick="document.location='IRK.htm'">AHAS KIRHS IRK building Venues</button>
+            <button onclick="document.location='IRK.htm'" class="irk">AHAS KIRHS <br> IRK building <br> Venues</button>
 
-            <button onclick="document.location='KOE.htm'">KOE Venues</button>
+            <button onclick="document.location='KOE.htm'" class="koe">KOE <br> Venues</button>
         </div>
     
     </body>

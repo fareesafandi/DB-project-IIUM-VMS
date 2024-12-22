@@ -4,34 +4,79 @@ body {
 
 .mainbody {
     text-align: center;
+    color: whitesmoke;
+    font-family: Arial;
+}
+
+#home {
+    position: static;
 }
 
 #title {
     text-align: center;
     font-family: Cambria;
     color: whitesmoke;
+    display: inline;
+    margin: 0px;
 }
 
+#titlelogo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+}
 button:hover {
     /*background-color: #EAEBED;*/
     padding-left: 50px;
     padding-right: 50px;
     border: none;
-    /*background-image: url('KICT.png');*/
+    /*background-image: url('img/KICT.png');*/
 
 }
 
 button {
     background-color: #F2BB05;
-    border: none;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: block;
+    border: 50px;
+    border-color: black;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline;
     text-align: center;
     margin: auto; 
-    margin-top: 15px;
+    margin-top: 80px;
+    /*border-radius: 25px;*/
+    transition-duration: 0.4s;
+    font-family: impact;
 }
 
 .venues {
-    margin: auto; 
+    /*margin-left: 240px;*/
+    max-width: fit-content;
+    margin: auto;
 }
+
+/*For each Kulliyyahs*/
+
+button.kict:hover {
+    background-image: url(img/KICT2.jpg);
+    background-size: 768px 432px;
+}
+
+button.hs:hover {
+    background-image: url(img/HS.jpg);
+    background-size: 1024px 633px;
+}
+
+button.irk:hover {
+    background-image: url(img/irk.jpg);
+    background-size: 500px 500px;
+}
+
+button.koe:hover {
+    background-image: url(img/koe.jpeg);
+    background-size: 1080px 680px;
+}
+
