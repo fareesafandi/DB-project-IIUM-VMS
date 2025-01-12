@@ -1,7 +1,26 @@
 body {
     background-color: #343434;
+    min-height: 100%;
+    margin-bottom: -100px;
+    margin-left: -0.1px;
+    margin-right: -0.1px;
 }
 
+body::after {
+    display: block;
+    height: 100px;
+}
+/*
+main {
+    min-height: 100%;
+    margin-bottom: -100px;
+}
+main:after {
+    content: "";
+    display: block;
+    height: 100px;
+}
+*/
 .mainbody {
     text-align: center;
     color: whitesmoke;
@@ -9,7 +28,8 @@ body {
 }
 
 #home {
-    position: static;
+    position: sticky;
+    cursor: pointer;
 }
 
 #title {
@@ -80,3 +100,93 @@ button.koe:hover {
     background-size: 1080px 680px;
 }
 
+button.koed:hover {
+    background-image: url(img/koed-768x432.jpg);
+    background-size: 768px 432px;
+}
+
+button.kenms:hover {
+    background-image: url(img/kenms.jpg);
+    background-size: 768px 432px;
+}
+
+button.book {
+    background-color: greenyellow;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+    margin: 10px;
+}
+
+button.update {
+    background-color: skyblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+    margin: 10px;
+
+}
+
+button.cancel {
+    background-color: red;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+    margin: 10px;
+}
+/*
+button.book:hover {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+button.update:hover {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+button.cancel:hover {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+*/
+#testform {
+    padding: 50px;
+}
+
+.footer {
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-family: Courier;
+    text-align: center;
+    padding: 20px;
+    display: block;
+    bottom: 0;
+}
+
+table {
+    font-family: Courier;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+td, th {
+    text-align: left;
+    padding: 5px;
+}
+
+input, label, select {
+    margin: 10px; 
+}
+
+.bookingform {
+    text-align: left;
+    color: white;
+    background-color: black;
+    font-family: 'Courier New';
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

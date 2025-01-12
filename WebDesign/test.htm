@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="description" content="Test Page.">
+        <link rel="stylesheet" href="web.css">
+
+        <title>Test page</title>
+    </head>
+    <body>
+        <!--TODO: Connect to a database using AJAX.-->
+
+        <h1 style="color: white;">Know Your Doctor!</h1>
+
+        <form id="testform" action=""> 
+            <select name="customers" onchange="showDoctor(this.value)">
+            <option value="">Select a Doctor:</option>
+            <option value="Harrison">Harrison</option>
+            <option value="Vester">Vester</option>
+            <option value="Lewis">Lewis</option>
+            </select>
+            </form>
+        <br>
+        <div id="txthint" class="test" style="
+        color: white;
+        font-family: Cambria;
+        text-align: left;
+        display: inline-block;
+        "></div>
+
+        <script>
+            function showDoctor(str) {
+                if(str == "") {
+                    document.getElementById("txthint").innerHTML = ""; 
+                    return; 
+                }
+                const xhttp = new XMLHttpRequest(); 
+                xhttp.onload = function() {
+                    document.getElementById("txthint").innerHTML = this.responseText; 
+                }
+                //"getDoctor.php?q=value&p=anothervalue.."
+                xhttp.open("GET", "getDoctor.php?q="+str, true); 
+                xhttp.send(); 
+            }
+
+        </script>
+    </body>
+</html>

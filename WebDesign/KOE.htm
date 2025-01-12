@@ -3,12 +3,39 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-        <meta name="description" content="KICT Venue">
+        <meta name="description" content="KOE Venue">
+        <link rel="stylesheet" href="web.css">
     </head>
-    <body>
-        <h1>KOE</h1>
-        <p>Venue Management system for Kulliyyah of Engineering.</p>
-        
+    <body onload="showVenue('KOE')">
+        <div id="home" onclick="document.location='index.html'">
+            <img src="img/IIUM.svg" alt="IIUMlogo" id="titlelogo">
+            <h1 id="title" style="text-align: left;">IIUM VMS</h1>
+        </div>
+
+        <div class="mainbody">
+            <h1>KOE</h1>
+            <p>Venue Management system for Kulliyyah of Engineering.</p>
+
+            <!--Show venues-->
+            <div id="tabVenue" style="margin: 10px;display: inline;">
+
+                <p style="text-align: left;padding: 20px;background-color: white;color: black;">Please choose option:</p>
+            </div>
+            <div style="text-align: center;padding: 5%;">
+                <button class="book" onclick="newBook('KOE', 'book')">Book <br>Venue</button>
+                <button class="update" onclick="newBook('KOE','update')">Update <br> Booking</button>
+                <button class="cancel" onclick="newBook('KOE', 'cancel')">Cancel <br> Booking</button>
+            </div>
+            <div id="tabBook" class="bookingform">
+                <!--Display Option form.-->
+            </div>
+            <footer class="footer">
+               <p>IIUM Venue Management System</p>
+               <br>
+               <p>BIIT 1301 SEM 1 2024/2025</p>
+           </footer>
+        </div>
+        <script src="venue.js"></script>
     </body>
 
 </html>

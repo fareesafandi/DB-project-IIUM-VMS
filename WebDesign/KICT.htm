@@ -6,7 +6,7 @@
         <meta name="description" content="KICT Venue">
         <link rel="stylesheet" href="web.css">
     </head>
-    <body>  
+    <body onload="showVenue(' KICT')">  
         <div id="home" onclick="document.location='index.html'">
             <img src="img/IIUM.svg" alt="IIUMlogo" id="titlelogo">
             <h1 id="title" style="text-align: left;">IIUM VMS</h1>
@@ -16,9 +16,31 @@
             <img src="img/KICT.png" alt="mainlogo" style="width: 20%;height: 10%;">
             <h1>KICT</h1>
             <p>Venue Management system for Kulliyyah of Information and Communication Technology.</p>
-        </div>
 
+            <!--Show KICT venues-->
+            <div id="tabVenue" style="margin: 10px;display: inline;">
+
+            </div>
+            <br>
+        <!--<button onclick="showVenue(' KICT')" style="padding: 10px;">refresh</button>-->
+
+            <p style="text-align: left;padding: 20px;background-color: white;color: black;">Please choose option:</p>
+        </div>
+        <div style="text-align: center;padding: 5%;">
+            <button class="book" onclick="newBook(' KICT', 'book')">Book <br>Venue</button>
+            <button class="update" onclick="newBook(' KICT','update')">Update <br> Booking</button>
+            <button class="cancel" onclick="newBook(' KICT', 'cancel')">Cancel <br> Booking</button>
+        </div>
+        <div id="tabBook" class="bookingform">
+            <!--Display Option form.-->
+        </div>
         
+        <footer class="footer">
+            <p>IIUM Venue Management System</p>
+            <br>
+            <p>BIIT 1301 SEM 1 2024/2025</p>
+        </footer>
     </body>
+    <script src="venue.js"></script>
 
 </html>
