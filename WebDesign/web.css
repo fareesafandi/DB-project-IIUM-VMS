@@ -190,3 +190,17 @@ input, label, select {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+#cancelbutton {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px; 
+    font-family: impact;
+    padding: 10px;
+}
+
+#cancelbutton:hover {
+    background-color: red;
+    border-radius: 50px;
+}

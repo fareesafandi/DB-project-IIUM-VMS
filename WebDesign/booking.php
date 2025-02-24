@@ -66,7 +66,55 @@ if($typeform == 'book') {
     echo "<input id='time' type='time' name='time'><br>";
     echo "<input type='submit' value='Update Booking'>"; 
     echo "</form>"; 
-}
+
+} elseif($typeform == 'cancel') {
+
+    $sql = "SELECT BOOKEDVENUE.VN_ID, VN_NAME, VN_DATE, TIME FROM BOOKEDVENUE JOIN VENUE 
+            ON VENUE.VN_ID = BOOKEDVENUE.VN_ID WHERE KULLIYAH = ?";
+
+    $stmt = $mysqli -> prepare($sql);
+
+    $stmt -> bind_param("s", $_GET['v']); 
+
+    //fetch results
+    $stmt -> execute(); 
+
+    $result = $stmt -> get_result(); 
+
+    echo "<h3>Booked Venues:</h3>";
+
+    echo "<table>";
+    echo "<tr>";  
+    echo "<th>Venue</th>";
+    echo "<th>Date</th>";
+    echo "<th>Time</th>";
+    echo "</tr>"; 
+
+
+    while($row = $result -> fetch_assoc()) {
+        $vname = $row['VN_NAME']; 
+        $date = $row['VN_DATE']; 
+        $time = $row['TIME']; 
+        $vid = $row['VN_ID']; 
+
+        echo "<tr>"; 
+        echo "<td>" . $vname . "</td>";
+        echo "<td>" . $date . "</td>";
+        echo "<td>" . $time . "</td>";
+        echo "<td>";    
+        /*
+        echo "<form id='cancelbutton'>";
+        echo "<input type=submit value='Cancel' onclick='deleteVenue(".$vid.", '".$vname."', '".$date."', '".$time."')'>"; 
+        echo "</form>";
+        */
+        echo "<button id='cancelbutton' onclick=\"deleteVenue(".$vid.", '".$vname."','".$date."', '".$time."')\">Cancel</button>";
+        echo "</td>";
+        echo "</tr>";   
+    }
+    echo "</table>"; 
+
+} 
+
 
 
 ?>
